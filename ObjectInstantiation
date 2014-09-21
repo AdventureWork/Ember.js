@@ -9,3 +9,18 @@ var tom = App.Person.create({
 });
 
 tom.helloWorld(); // alerts "Hi, my name is Tom Dale"
+============================================================
+OR
+===========================================================
+App.Person = Ember.Object.extend({
+  init: function() {
+    var name = this.get('name');
+    alert(name + ", reporting for duty!");
+  }
+});
+
+App.Person.create({
+  name: "Stefan Penner"
+});
+
+// alerts "Stefan Penner, reporting for duty!"
